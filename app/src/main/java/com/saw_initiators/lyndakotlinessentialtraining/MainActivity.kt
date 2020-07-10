@@ -1,80 +1,103 @@
 package com.saw_initiators.lyndakotlinessentialtraining
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+
+    enum class Suit {
+        Club, Diamond, Heart, Spade
+    }
+
+    data class Person (var firstName: String, var lastName: String)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val greeting: String = "Hello There"
-        val owe = 50
 
-        val janet = "I owe Janet \$$owe dollars"
-        println(janet)
 
-        val infinity = "The infinity symbol is \u221E"
-        println(infinity)
 
-        println("[$greeting] is ${greeting.length} characters long")
+       /* //val person1: Person = null
+        val person2: Person? = null
 
-        var bad = greeting.get(2)
-        val  letter = greeting[1]
+        val greeting: String? = "Hello There"
 
-        val compare1 = "beta"
-        val compare2 = "alpha"
-
-        println("${compare1.compareTo(compare2)}")
-
-        val sub = greeting.subSequence(6,9)
-        println("sub =  ${sub}")
-
-        for (single in greeting) {
-            print("$single ")
+        if (greeting != null) {
+            println("Joe Says: $greeting")
         }
 
-        val myString = """
-           Kotlin is fun.
-            Kotlin in pragmatic.
-        """
+        println("greeting length = ${greeting?.length}")
 
-        println(myString)
+        val len = greeting?.length ?:0
+        println("Length = $len")
 
+        val badLen = greeting!!.length
 
-       /* var count: Int = 0
-        val number: Int = 42
+        val safeGuard: String? = greeting as? String
+*/
+     /*   for (i in 1..10) {
+            println("i = $i")
+        }
 
-        val otherNumber = 43
+        val students = listOf("abdul","jameel", "jameela", "shakeel", "shakeela")
+        for (student in students) {
+            println("current student is $student")
+        }
 
-        val myLong: Long = 3000000000L
-        val myByte: Byte = 127
-        val myShort: Short = 32767
-        val myDouble: Double = 98.6
-        val myFloat: Float = 12.2F
-        val alsoDouble = 101.5
-
-        val asInt = alsoDouble.toInt()
-        val asFloat = myLong.toFloat()
-
-        val maxInt = 2_147_483_648*/
+        for ((index, student) in students.withIndex()) {
+            println("Student #$index + 1 is $student")
+        }*/
 /*
-        val letter: Char = 'A'
-        val tab: Char = '\t'
-        val infinity: Char = '\u221E'
+        val x = 1
+        when(x) {
+            1 -> println("x == 1")
+            2 -> println("x == 2")
+            3,4 -> println("x == 3 or 4")
+        }
 
-        println("letter = $letter")
-        println("Tabbed $tab over")
-        println("infinity $infinity")
+        val card = Suit.Spade
+        val y = when(card) {
+            Suit.Club, Suit.Spade -> println("Black Card")
+            Suit.Diamond, Suit.Heart -> println("Red Card")
+        }
 
-        val lineFeed = 10.toChar()
-        println("line feed = $lineFeed")
+        val ageType = when(x) {
+            in 0..1 -> "baby"
+            in 2..4 -> "toddler"
+            in 5..12 -> "kid"
+            in 13..19 -> "teenager"
+            in 20..64 -> "adult"
+            else -> "senior"
+        }
 
-        var willExercise: Boolean = false
-        val bigNumber = 1_000_000
-        val smallNumber = 2
-        println("is bug number bigger = ${bigNumber > smallNumber}")
+        println("You are a $ageType")*/
 
-        println("will exercise = ${!willExercise}")*/
+
+
+        /*val bigger = 101
+        val smaller = 1
+        val max = if (bigger > smaller) bigger else smaller
+
+        if (bigger > 10 ){
+            println("Greater than 10.")
+        } else if (bigger > 100) {
+            println("Greater than 100")
+        } else {
+            println("Not too big")
+        }
+
+        val number = 121
+        val bucket: Any = if (number > 100) {
+            "alpha"
+        } else if (number > 90) {
+            println("Less than 90")
+            2
+        } else if (number > 80) {
+            1
+        } else {
+            0
+        }
+        println("bucket = $bucket")*/
     }
 }
